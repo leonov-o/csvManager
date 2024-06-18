@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <title>CSVManager</title>
+</head>
+<body>
+<div class="flex flex-col h-screen">
+    <header class="bg-gray-100 py-4 px-6 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">CSVManager</h1>
+        <div class="flex items-center gap-4">
+            <button id="generateData" class="flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border h-10 px-4 py-2">
+                Згенерувати дані
+            </button>
+            <button id="addRecord" class="flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border h-10 px-4 py-2">
+                Додати запис
+            </button>
+            <button id="saveData" class="flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border h-10 px-4 py-2">
+                Зберегти в файл
+            </button>
+            <input
+                    id="fileInput"
+                    class="h-10 rounded-md border px-3 py-2 text-sm file:border-0 file:text-sm file:font-medium"
+                    type="file"
+                    accept="text/csv"
+            />
+        </div>
+    </header>
+    <div class="flex-1 overflow-auto p-4">
+        <div class="relative w-full overflow-auto">
+            <table class="w-full caption-bottom text-sm">
+                <thead class="border-b"></thead>
+                <tbody class="border-0"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
